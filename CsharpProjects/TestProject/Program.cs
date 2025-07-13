@@ -402,6 +402,83 @@ do
             Console.WriteLine("\n\tNickname and personality description fields are complete\n\tPress Enter to continue");
             readResult = Console.ReadLine();
             break;
-    }
 
+        case "5":
+            Console.WriteLine("Enter pet ID to edit their age");
+            readResult = Console.ReadLine();
+            bool found = false;
+            string searchID = "ID #: " + readResult.ToUpper();
+            for (int i = 0; i < maxPets; i++)
+            {
+                if (ourAnimals[i, 0] == searchID)
+                {
+                    found = true;
+                    Console.WriteLine($"Current age: {ourAnimals[i, 2]}");
+                    Console.WriteLine("Enter new age");
+                    do
+                    {
+                        readResult = Console.ReadLine();
+                        if (readResult != null)
+                        {
+                            animalAge = readResult;
+                            validEntry = int.TryParse(animalAge, out petAge);
+                            if (!validEntry)
+                            {
+                                Console.WriteLine("Please enter valid number");
+                            }
+                        }
+                    } while (validEntry == false);
+                    ourAnimals[i, 2] = "Age: " + animalAge;
+                    Console.WriteLine("Age successfully updated");
+                    break;
+                }
+            }
+            if (!found)
+            {
+                Console.WriteLine("pet ID not found");
+            }
+            Console.WriteLine("Press enter to continue");
+            readResult = Console.ReadLine();
+            break;
+
+
+        case "6":
+        // Edit an animal’s personality description");
+            Console.WriteLine("Enter pet ID to edit their personality description");
+            readResult = Console.ReadLine();
+            found = false;
+            searchID = readResult.ToUpper();
+            for (int i = 0; i < maxPets; i++)
+            {
+                if (ourAnimals[i, 0] == searchID)
+                {
+                    found = true;
+                    Console.WriteLine("Enter new description");
+                    do
+                    {
+                        readResult = Console.ReadLine();
+                        if (readResult != null)
+                        {
+                            animalPersonalityDescription = readResult;
+                            validEntry = true;
+                            if (!validEntry)
+                            {
+                                Console.WriteLine("please enter valid input");
+                            }
+                        }
+                    } while (validEntry == false);
+                    ourAnimals[i, 5] = "Personality: " + animalPersonalityDescription;
+                    Console.WriteLine("Personality description updated successfully");
+                    break;
+                }
+            }
+            if (!found)
+            {
+                Console.WriteLine("pet ID not found");
+            }
+            Console.WriteLine("Press enter to continue");
+            readResult = Console.ReadLine();
+            break;
+            
+    }
 } while (menuSelection != "exit");

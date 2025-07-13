@@ -12,3 +12,4 @@ C:\Users\user\OneDrive\Desktop\C# learning\CsharpProjects\TestProject\obj\Debug\
 C:\Users\user\OneDrive\Desktop\C# learning\CsharpProjects\TestProject\obj\Debug\net9.0\TestProject.pdb
 C:\Users\user\OneDrive\Desktop\C# learning\CsharpProjects\TestProject\obj\Debug\net9.0\TestProject.genruntimeconfig.cache
 C:\Users\user\OneDrive\Desktop\C# learning\CsharpProjects\TestProject\obj\Debug\net9.0\ref\TestProject.dll
+C:\Users\user\OneDrive\Desktop\C# learning\CsharpProjects\TestProject\obj\Debug\net9.0\TestProject.sourcelink.json

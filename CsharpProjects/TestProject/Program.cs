@@ -443,7 +443,7 @@ do
 
 
         case "6":
-        // Edit an animal’s personality description");
+            // Edit an animal’s personality description");
             Console.WriteLine("Enter pet ID to edit their personality description");
             readResult = Console.ReadLine();
             found = false;
@@ -478,6 +478,24 @@ do
             }
             Console.WriteLine("Press enter to continue");
             readResult = Console.ReadLine();
+            break;
+
+
+        case "7":
+            // Display all cats with a specified characteristic
+            Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+            Console.WriteLine("Press the Enter key to continue.");
+            readResult = Console.ReadLine();
+            break;
+
+        case "8":
+            // Display all dogs with a specified characteristic
+            Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+            Console.WriteLine("Press the Enter key to continue.");
+            readResult = Console.ReadLine();
+            break;
+
+        default:
             break;
             
     }
